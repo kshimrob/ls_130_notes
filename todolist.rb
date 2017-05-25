@@ -151,6 +151,10 @@ class TodoList
   def mark_all_undone
     each {|task| task.undone!}
   end
+
+  def ==(another_list)
+    @todos == another_list.to_a
+  end
 end
 
 todo1 = Todo.new("Buy milk")
